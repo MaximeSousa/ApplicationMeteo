@@ -16,4 +16,3 @@ Récupère les informations météo et les indique sur une semaine glissante ave
 Doit avoir un système d'authentification.
 
 
-SuperUser : maxim     mdp: 123456789/
