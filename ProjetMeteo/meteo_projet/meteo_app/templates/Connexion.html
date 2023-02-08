@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connection</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <div class="content">
+        <div class="form">
+            <h1> Connexion </h1>
+
+            <form action="" method="POST">
+                {% csrf_token %}
+
+                <label for="nom"> Nom : </label>
+                <input type="text" placeholder="Entrer votre Nom" name="nom"> <br>
+    
+                <label for="mdp"> Mot de Passe : </label>
+                <input type="text" placeholder="Entrer votre mot de passe" name="mdp"><br>
+    
+                <a href="{% url 'Inscription'%}"> Inscription</a>
+                <button type="submit">Se Connecter</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
