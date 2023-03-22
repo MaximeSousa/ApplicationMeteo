@@ -1,0 +1,173 @@
+  body{
+    background-color: #d8e5e7;
+  }
+  
+  /* Centrer le formulaire */
+  form {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #a5a8a5;
+    border-radius: 15px;
+  }
+  
+  /* Style pour le titre "Inscription" */
+  h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 50px 0;
+  }
+  
+  /* Style pour les labels */
+  label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  /* Style pour les champs de formulaire */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style pour les boutons */
+  input[type="submit"] {
+    background-color: #336699;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  a{
+    color: #fff;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #10b1ce; 
+  }
+  
+  /* Style pour les messages d'erreur ou de succès */
+  .messages {
+    margin: 20px 0;
+    padding: 10px;
+    list-style: none;
+    background-color: #ffd6cc;
+    border: 1px solid #ff9696;
+    border-radius: 5px;
+  }
+  
+  .messages.success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+  }
+
+  button {
+    background-color: #336699; 
+    border: none;
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 10px 2px; 
+    cursor: pointer; 
+    border-radius: 10px; 
+    transition: background-color 0.3s ease-in-out;
+  }
+  a{
+    color: white;
+  }
+
+  button:hover {
+    background-color: #10b1ce; 
+  }
+
+  
+  .weather-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 400px;
+    height: 250px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    color: #333;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+
+  .weather-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+  }
+  
+  .weather-icon img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .weather-info {
+    text-align: left;
+  }
+  
+  .weather-info h2 {
+    margin: 0 0 10px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .weather-info p {
+    margin: 5px;
+    font-size: 18px;
+  }
+
+  .weather-info p:first-child {
+    margin-top: 10px;
+  }
+
+
+  form[name=home] {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #a5a8a5;
+    border-radius: 15px;
+  }
+  
+
+  input[name="city"]{
+    display:flex;
+  }
+
+  div[name="Autre"]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }

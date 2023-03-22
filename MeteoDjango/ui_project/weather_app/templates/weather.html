@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="weather">
+        <form name="home" action="" method="get">
+            <div>
+                <input type="text" name="city" placeholder="Enter une Ville ">
+            </div>
+            <button type="submit">Rechercher</button>
+        </form>
+        <div name="Autre">
+            <button><a href="{% url 'logout' %}">Deconnexion</a></button>
+        </div>
+        
+        {% if data %}
+        <div class="weather-card">
+            <div class="weather-icon">
+                <img src="http://openweathermap.org/img/w/{{data.weather.0.icon}}.png">
+            </div>
+            <div class="weather-info">
+                <h2>{{ data.name }}, {{ data.sys.country }}</h2>
+                <p>{{ data.weather.0.description }}</p>
+                <p>Temperature : {{ data.main.temp }}°C</p>
+                <p>Humidité : {{ data.main.humidity }}%</p>
+                <p>Température Min : {{ data.main.temp_min }}°C</p>
+                <p>Température Max : {{ data.main.temp_max }}°C</p>
+                <p>Vitesse du Vent : {{ data.wind.speed }} m/s</p>
+            </div>
+        </div>
+        {% endif%}
+
+        {% for search in searches %}
+            <li>{{ search.city }} - {{ search.date }}</li>
+        {% empty %}
+            <li>Aucune recherche effectuée</li>
+        {% endfor %}
+    </div>
+
+{% endblock %}

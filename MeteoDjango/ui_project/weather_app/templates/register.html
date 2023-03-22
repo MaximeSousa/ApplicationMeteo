@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Inscription</h2>
+<form method="POST">
+  {% csrf_token %}
+  <div>
+    <label for="username">Nom d'utilisateur :</label>
+    <input type="text" name="username" required>
+  </div>
+  <div>
+    <label for="email">Email :</label>
+    <input type="email" name="email" required>
+  </div>
+  <div>
+    <label for="password1">Mot de passe :</label>
+    <input type="password" name="password1" required>
+  </div>
+  <div>
+    <label for="password2">Confirmer le mot de passe :</label>
+    <input type="password" name="password2" required>
+  </div>
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  <input type="submit" value="S'inscrire">
+</form>
+<div name="Autre">
+  <button><a href="{% url 'login' %}">Se Connecter</a></button>
+</div>
+{% endblock %}
